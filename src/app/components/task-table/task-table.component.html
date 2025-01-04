@@ -1,0 +1,20 @@
+<p-table [value]="tasks">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Task Name</th>
+        <th>Duration (minutes)</th>
+        <th>Completed</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-task>
+      <tr>
+        <td>{{ task.name }}</td>
+        <td>{{ task.duration }}</td>
+        <td>{{ task.completed ? 'Yes' : 'No' }}</td>
+        <td>
+          <button pButton type="button" icon="pi pi-trash" (click)="deleteTask(task.id)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>

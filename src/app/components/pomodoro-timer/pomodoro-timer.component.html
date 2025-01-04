@@ -1,0 +1,7 @@
+<div class="pomodoro-timer">
+    <h1>Pomodoro Timer</h1>
+    <div class="timer-display">{{ timeLeft | date:'mm:ss' }}</div>
+    <button pButton type="button" icon="pi pi-play" label="Start" (click)="startTimer()" [disabled]="isRunning"></button>
+    <button pButton type="button" icon="pi pi-pause" label="Pause" (click)="pauseTimer()" [disabled]="!isRunning"></button>
+    <button pButton type="button" icon="pi pi-refresh" label="Reset" (click)="resetTimer()"></button>
+  </div>
